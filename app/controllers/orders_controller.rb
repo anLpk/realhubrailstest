@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
    HEADERS = {"x-api-token".to_sym => ENV["API_KEY"]}
 
    def show
-      @orders = get_orders[0..10]
+      @orders = get_orders[0..30] #api calls slow that's just display first 30 of them
       @orders.map! do |order|
         {
           agency: order['agency']['title'],
