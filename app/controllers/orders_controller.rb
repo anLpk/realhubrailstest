@@ -39,7 +39,6 @@ class OrdersController < ApplicationController
     end
 
     def get_orders
-      pak = JSON.parse(RestClient.get(URL + "orders.json?include_order_agency=true&include_order_campaign=true&include_order_items=true", HEADERS))
-    #   raise
+      JSON.parse(RestClient.get(URL + "orders.json?include_order_agency=true&include_order_campaign=true&include_order_items=true", HEADERS))
     end
 end
