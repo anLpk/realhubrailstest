@@ -1,3 +1,27 @@
-<% @orders.each do |order| %>
-<%= order %>
-<%end %>
+<main>
+  <header>
+    <h1>Orders</h1>
+  </header>
+  <section>
+      <% @orders.each do |order| %>
+        <article>
+          <div id="head-title">
+            <%= order[:agency] %> - <%= order[:campaing_address] %> <%= order[:suburb_name] %>
+          </div>
+          <div>
+            <% order[:items].each do |item| %>
+              <div class="flex-items">
+                <%= item[:item_name] %>
+                <div>
+                  <p><%= item[:status] %></p>
+                  <% if item[:item_link] %>
+                    <%= link_to 'Download', item[:item_link], class: "download-link"%>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </article> 
+      <% end %> 
+  </section>
+</main>

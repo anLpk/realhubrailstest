@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+$font-family: "Roboto", sans-serif;
+$red: #fd1015;
+$blue: #167ffb;
+$yellow: #ffc65a;
+$orange: #e67e22;
+$green: #1edd88;
+$gray: #808080;
+$light-gray: #f4f4f4;
+$white: #fff;
+$tomato: #ff6347;
+// Font-Family
+body {
+  font-family: $font-family;
+  opacity: 0.6;
+}
+
+header {
+  width: 100%;
+  border: 1px solid $gray;
+
+  h1 {
+    text-align: left;
+    margin-left: 7em;
+    font-weight: 400;
+  }
+}
+
+#head-title {
+  border-bottom: 1px solid $gray;
+}
+
+article {
+  width: 70%;
+  border: 1px solid $gray;
+  margin: 2rem auto 1rem;
+}
+
+.flex-items {
+  display: flex;
+  justify-content: space-between;
+  p {
+    color: $blue;
+  }
+}
+
+.download-link {
+  color: $orange;
+}
