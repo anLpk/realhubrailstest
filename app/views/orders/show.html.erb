@@ -6,9 +6,9 @@
       <% @orders.each do |order| %>
         <article>
           <div id="head-title">
-            <%= order[:agency] %> - <%= order[:campaing_address] %> <%= order[:suburb_name] %>
+            <span><%= order[:agency] %> - <%= order[:campaing_address] %> <%= order[:suburb_name] %></span>
           </div>
-          <div>
+          <div class="content-container">
             <% order[:items].each do |item| %>
               <div class="flex-items">
                 <%= item[:item_name] %>

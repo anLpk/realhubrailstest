@@ -26,14 +26,21 @@ header {
   }
 }
 
-#head-title {
-  border-bottom: 1px solid $gray;
-}
-
 article {
   width: 70%;
   border: 1px solid $gray;
   margin: 2rem auto 1rem;
+}
+
+#head-title {
+  border-bottom: 1px solid $gray;
+  span {
+    margin-left: 0.4em;
+  }
+}
+
+.content-container {
+  margin: 0.4em;
 }
 
 .flex-items {
